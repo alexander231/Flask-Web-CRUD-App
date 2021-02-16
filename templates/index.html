@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link href="{{ url_for('static', filename='mystyle.css') }}" rel="stylesheet" media="screen"> 
+        <title>Proiect Flask</title>
+    </head>
+    <body>
+        
+
+            <!-- Hover #1 -->
+        <div class="box-1">
+            <a href="{{ url_for('profesori') }}" style="text-decoration:none; outline:none;">
+            <div class="btn btn-one" >
+               
+            <span>Profesori</span>
+            </div>
+            </a>
+        </div>
+        
+        <!-- Hover #2 -->
+        <div class="box-2">
+            <a href="{{ url_for('departamente') }}" style="text-decoration:none; outline:none;">
+            <div class="btn btn-two">
+            <span>Departamente</span>
+            </div>
+            </a>
+        </div>
+        
+        <!-- Hover #3 -->
+        <div class="box-3">
+            <a href="{{ url_for('cursuri') }}" style="text-decoration:none; outline:none;">
+            <div class="btn btn-three">
+            <span>Cursuri</span>
+            </div>
+            </a>
+        </div>
+
+    </body>
+
+</html>

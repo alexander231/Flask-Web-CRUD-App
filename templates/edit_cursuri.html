@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_cursuri/{{cursuriDetails[0]}}" method="POST">
+            <div class="form-group">
+                <SELECT NAME="idprofesor">
+                  {% for data in profesoriDetails %}
+                  <OPTION VALUE= "{{data[0]}}">{{data[0]}}, {{data[1]}}, {{data[2]}}, {{data[3]}}, {{data[4]}}</OPTION>
+                  {% endfor %}
+                </SELECT>
+                
+              </div>
+              <div class="form-group">
+                <SELECT NAME="iddepartament">
+                  {% for data in departamenteDetails %}
+                  <OPTION VALUE= "{{data[0]}}">{{data[0]}}, {{data[1]}}, {{data[2]}}, {{data[3]}}</OPTION>
+                  {% endfor %}
+                
+                </SELECT>
+              </div>
+          <div class="form-group">
+            <input type="text" name="nume" value="{{cursuriDetails[3]}}" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="credite" value="{{cursuriDetails[4]}}" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="ore_pe_semestru" value="{{cursuriDetails[5]}}" class="form-control"required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}
